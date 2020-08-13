@@ -6,7 +6,7 @@ const fs = require('fs');
 const server = new http.Server();
 
 server.on('request', (req, res) => {
-  res.setHeader("Content-Type", "application/json; charset=utf-8");
+  //res.setHeader("Content-Type", "application/json; charset=utf-8");
   // parse принимает строку и отдает URL object
   // pathname вынимает из URL object path часть. (В www.leningrad.ru/vibori/kandidati path – '/vibori/kandidati')
   // slice(1) вернет всю строку после 1го символа, т.е. path после / – vibori/kandidati

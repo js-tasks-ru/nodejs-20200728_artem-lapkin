@@ -13,7 +13,7 @@ class LimitSizeStream extends stream.Transform {
     this.memoryUsed += Buffer.byteLength(chunk);
 
     if (this.memoryUsed > this.limit) {
-      callback(new LimitExceededError);
+      callback(new LimitExceededError());
     } else {
       callback(null, chunk);
     }
